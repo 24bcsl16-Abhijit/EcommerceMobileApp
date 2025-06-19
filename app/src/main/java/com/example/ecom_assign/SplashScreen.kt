@@ -1,3 +1,4 @@
+// app/src/main/java/com/example/ecom_assign/SplashScreen.kt
 package com.example.ecom_assign
 
 import androidx.compose.foundation.background
