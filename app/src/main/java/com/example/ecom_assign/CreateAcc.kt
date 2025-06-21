@@ -1,4 +1,5 @@
-package com.example.ecom_assign
+// app/src/main/java/com/example/ecom_assign/CreateAccountScreen.kt
+package com.example.ecom_assignment
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -15,10 +16,10 @@ import androidx.compose.foundation.Image
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
-import com.example.ecom_assign.ui.theme.BackgroundLightGray
-import com.example.ecom_assign.ui.theme.PrimaryPurple
-import com.example.ecom_assign.ui.theme.TextBlack
-import com.example.ecom_assign.ui.theme.TextGrayPlaceholder
+import com.example.ecom_assignment.ui.theme.BackgroundLightGray
+import com.example.ecom_assignment.ui.theme.PrimaryPurple
+import com.example.ecom_assignment.ui.theme.TextBlack
+import com.example.ecom_assignment.ui.theme.TextGrayPlaceholder
 
 @Composable
 fun CreateAccountScreen(navController: NavController) {
@@ -79,7 +80,7 @@ fun CreateAccountScreen(navController: NavController) {
         // makes the "Already have an account?" text too high or low.
         // For now, keeping it as is, might need more space if it's the last element.
         // Let's add a larger spacer if social buttons are removed, to push "Already have an account?" down
-        Spacer(modifier = Modifier.height(48.dp))
+        Spacer(modifier = Modifier.height(48.dp)) // Increased spacer for visual balance
 
         Row(
             modifier = Modifier.fillMaxWidth(),
@@ -143,10 +144,11 @@ fun InputField(
     )
 }
 
+// This composable might be in CreateAccountScreen.kt or a separate file like CommonComposables.kt
 @Composable
 fun SocialLoginButton(iconRes: Int, text: String, onClick: () -> Unit) { // ADD onClick parameter
     Button(
-        onClick = onClick,
+        onClick = onClick, // Use the passed-in onClick lambda
         modifier = Modifier
             .fillMaxWidth()
             .height(56.dp),
